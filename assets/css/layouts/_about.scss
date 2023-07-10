@@ -1,0 +1,151 @@
+.about-area{
+    background-repeat: no-repeat;
+    background-position: 94% 50%;
+
+    @include respond-between(md, lg) {
+         background-position: 97% 50%;
+    }
+    @include respond-below(md) {
+        background-position: 96% 50%;
+    }
+    @include respond-between(xs, sm) {
+      background-size: 80px 100px;
+    }
+    @include respond-below(xs) {
+      background-size: 0px 0px;
+    }
+
+    &.shape-rose{
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content:'';
+            top: 0px;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            width: 135px;
+            height: 135px;
+            background-image: url(../../img/about/china-rose.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            @include respond-between(sm, md) {
+                width: 110px;
+                height: 110px;
+            }
+            @include respond-between(xs, sm) {
+                width: 100px;
+                height: 100px;
+                top: -5%;
+            }
+            @include respond-below(xs) {
+                width: 50px;
+                height: 50px;
+                top: -12%;
+            }
+        }
+    }
+    .about{
+        background-repeat: no-repeat;
+        background-position: -10% 0%;
+
+        &__sub-title{
+            h4{
+                @include fonts($main-font, 20, 400, $para-color, uppercase, 54px);
+
+                @include respond-between(md, lg) {
+                    @include texts(19, 50)
+                }
+                @include respond-between(sm, md) {
+                    @include texts(18, 45)
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(16, 40)
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(15, 35)
+                  
+                }
+                &:after{
+                    position: absolute;
+                    content:'';
+                    top: -40px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 84px;
+                    height: 70px;
+                    background-image: url(../../img/about/butterfly.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+
+                    @include respond-between(sm, md) {
+                        width: 74px;
+                        height: 60px;
+                    }
+                    @include respond-between(xs, sm) {
+                        width: 64px;
+                        height: 50px;
+                    }
+                    @include respond-below(xs) {
+                        width: 54px;
+                        height: 40px;
+                    }
+                    
+                }
+            }
+        }
+        &__title{
+            h2{
+             @include fonts($second-font, 42, 700, $title-color, capitalize, 54px);
+
+                @include respond-between(md, lg) {
+                    @include texts(35, 50)
+                }
+                @include respond-between(sm, md) {
+                    @include texts(32, 50)
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(25, 50)
+                }
+                @include respond-below(xs) {
+                    @include texts(20, 30)
+                }
+            }
+        }
+        &__disc{
+            p{
+              @include para-style;
+                text-align: justify !important;
+            }
+        }
+        &__link{
+            button.btn{
+                a{
+                    background-color: $btn-color;
+                    padding: 0 50px;
+                    border-radius: 30px;
+                    line-height: 50px;
+
+                    @include respond-between(sm, md) {
+                         padding: 0 40px;
+                    }
+                    @include respond-between(xs, sm) {
+                        padding: 0 35px;
+                    }
+                    @include respond-below(xs) {
+                        padding: 0 30px;
+                    }
+
+                    &:hover {
+                        background-color: $title-color;
+                        color: $btn-color;
+                    }
+
+                }
+            }
+        }
+    }
+}

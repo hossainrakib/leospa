@@ -1,0 +1,188 @@
+.team-area{
+    .team{
+        .slick-list {
+            padding-bottom: 70px;
+            margin: 0 -15px;
+
+            @include respond-between(lg, xl) {
+                padding-bottom: 80px;
+  
+            }
+            @include respond-between(md, lg) {
+                padding-bottom: 56px;
+
+            }
+            @include respond-between(sm, md) {
+                padding-bottom: 50px;
+              
+            }
+            @include respond-between(xs, sm) {
+                padding-bottom: 50px;
+              
+            }
+            @include respond-below(xs) {
+                padding-bottom: 50px;
+              
+            }
+        }
+        &__single{
+            margin: 0 15px;
+
+            &__image{
+                img{
+                    @include respond-below(xs) {
+                        height: 425px;
+                      
+                    }
+                }
+            }
+            &__action{
+                @extend .transition;
+                z-index: 2;
+                top: 90%;
+                left: 0%;
+
+
+                @include respond-between(md, lg) {
+                    top: 85%;
+                }
+                @include respond-between(sm, md) {
+                   top: 87%;
+                }
+                @include respond-between(xs, sm) {
+                    top: 86%;
+                  
+                }
+                @include respond-below(xs) {
+                   
+                }
+                .author{
+                    &__info{
+                        h2{
+                            @include fonts($second-font, 22, 700, $section-color, capitalize, 27px);
+
+                            @include respond-between(md, lg) {
+  
+                            }
+                            @include respond-between(sm, md) {
+                              @include texts(20, 25px)
+                            }
+                            @include respond-between(xs, sm) {
+                                @include texts(18, 22px)
+                              
+                            }
+                            @include respond-below(xs) {
+                                @include texts(16, 20px)
+                              
+                            }
+                        }
+                    }
+                    &__skile{
+                        h4{
+                            @include fonts($main-font, 15, 300, $skile-color, capitalize, 27px);
+                            margin: 10px 0 30px 0;
+
+                            @include respond-between(md, lg) {
+                                margin: 10px 0 20px 0;
+  
+                            }
+                            @include respond-between(sm, md) {
+                                margin: 10px 0 18px 0;
+                              
+                            }
+                            @include respond-between(xs, sm) {
+                                margin: 6px 0 15px 0;
+                                @include texts(13, 24px)
+
+                              
+                            }
+                            @include respond-below(xs) {
+                                margin: 6px 0 15px 0;
+                                @include texts(12, 22px)
+                            }
+                        }
+                    }
+                    &__follows{
+                        ul{
+                            margin: 0 -5px;
+                            li.item{
+                                margin: 0 5px;
+                                a.link{
+                                    font-size: 12px;
+                                    color: $socail-color;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 30px;
+                                    width: 30px;
+                                    border-radius: 50%;
+                                    border: 1px solid $socail-color;
+
+                                    @extend .transition;
+
+                                    &:hover {
+                                        background-color: $btn-color;
+                                        border-color: $btn-color;
+                                        & i{
+                                            color: $white-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &__content{
+                    padding: 35px 0 30px 0;
+                    margin: 0 30px;
+                    background-color: $white-bg;
+
+                    @include respond-between(md, lg) {
+                        padding: 30px 0 25px 0;
+  
+                    }
+                    @include respond-between(sm, md) {
+                        padding: 25px 0 25px 0;
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        padding: 20px 0 20px 0;
+                        margin: 0 17px;
+                      
+                    }
+                    @include respond-below(xs) {
+                        padding: 20px 0 16px 0;
+                        margin: 0 15px;
+                    }
+                }
+            }
+            &:hover {
+                .team__single__action{
+                    top: 72%;
+
+                    @include respond-between(lg, xl) {
+                        top: 70%;
+                    }
+                    @include respond-between(md, lg) {
+                        top: 62%;
+                    }
+                    @include respond-between(sm, md) {
+                        top: 67%;
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        top: 61%;
+                      
+                    }
+                    @include respond-below(xs) {
+                        top: 73%;
+                      
+                    }
+                    &__content{
+                          box-shadow: 0px 8px 20px 0px $box-shadow-color;
+                    }
+                }
+            }
+        }
+    }
+}

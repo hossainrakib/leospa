@@ -1,0 +1,32 @@
+.section{
+    &__title{
+        h2{
+            @include fonts($second-font, 42, 700, $section-color, capitalize, 28px);
+            margin-bottom: 20px;
+
+            @include respond-between(md, lg) {
+                font-size: 38px;
+            }
+            @include respond-between(sm, md) {
+                font-size: 35px;
+              
+            }
+            @include respond-between(xs, sm) {
+                margin-bottom: 15px;
+                font-size: 30px;
+              
+            }
+            @include respond-below(xs) {
+                font-size: 26px;
+                margin-bottom: 10px
+              
+            }
+        }
+    }
+    &__disc{
+        p{
+            @include para-style;
+        }
+    }
+}
+

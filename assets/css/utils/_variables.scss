@@ -1,0 +1,271 @@
+//text-color
+$title-color:#1e2528;
+$menu-color: #263a41;
+$hero-sub-title:#ff817e;
+$hero-disc-color:#555555;
+$btn-color:#ff817e;
+$white-color:#fff;
+$para-color:#888888;
+$section-color:#263a41;
+$border-color:#e3e6ea;
+$box-shadow-color:#ebecef;
+$skile-color:#777;
+$socail-color:#30383b;
+$place-color:#999999;
+$follow-color:#3a414e;
+
+//backgroutd-color
+
+$menu-bg:#fff9f8;
+$white-bg:#fff;
+$btn-bg:#30383b;
+$testimonials-bg:#fff9f8;
+$dot-bg:#ffc3c2;
+$appointment-bg:#fff9f8;
+$footer-bg:#fff9f8;
+$preloader-bg:rgb(76, 104, 97);
+
+
+
+//section-padding
+
+.section-padding{
+    padding: 140px 0px;
+
+    @include respond-between(md, lg) {
+         padding: 100px 0px;
+    }
+    @include respond-between(sm, md) {
+         padding: 70px 0px;
+    }
+    @include respond-between(xs, sm) {
+         padding: 40px 0px;
+    }
+    @include respond-below(xs) {
+          padding: 30px 0px;
+    }
+
+}
+.speace-t-100 {
+    padding-top: 100px;
+
+    @include respond-between(md, lg) {
+        padding-top: 80px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 60px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 40px;
+    }
+    @include respond-below(xs) {
+        padding-top: 35px;
+    }
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//animation
+.transition{
+    transition: all .3s ease-in-out;
+}
+//button
+.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-style{
+    @include fonts($main-font, 13, 500, $white-color, uppercase, 72px);
+    display: inline-block;
+    transition: all .3s ease-in-out;
+
+    @include respond-between(md, lg) {
+  
+    }
+    @include respond-between(sm, md) {
+      line-height: 60px;
+    }
+    @include respond-between(xs, sm) {
+        line-height: 50px;
+      
+    }
+    @include respond-below(xs) {
+        line-height: 45px;
+        
+      
+    }
+}
+//btn-lights
+.btn-lights{
+    padding: 10px 40px;
+    line-height: 27px;
+    background-color: $btn-bg;
+    border-radius: 30px;
+
+    @include respond-between(md, lg) {
+  
+    }
+    @include respond-between(sm, md) {
+         padding: 8px 35px;
+      
+    }
+    @include respond-between(xs, sm) {
+        padding: 6px 30px;
+      
+    }
+    @include respond-below(xs) {
+        padding: 3px 27px;
+      
+    }
+    &:hover {
+        background-color: $btn-color;
+        color: $white-color;
+    }
+}
+.btn-submit{
+    background-color: $btn-color;
+    &:hover {
+        background-color: $title-color;
+        color: $btn-color;
+    }
+}

@@ -1,0 +1,84 @@
+.header-area{
+    z-index: 999;
+    .main-header{
+        .navbar{
+            padding: 0 !important;
+            .navbar-brand{
+                margin: 0 !important;
+                padding: 20px 0 0 0 !important;
+
+                @include respond-below(md) {
+                  padding-top: 10px !important;
+                }
+                a{
+                    img{
+
+                    }
+                }
+            }
+            .navbar-toggler{
+                border: 1px solid $btn-color;
+
+                @include respond-below(xs) {
+                    line-height: 14px !important;
+                }
+                
+                &:focus {
+                    box-shadow: 0 0 0 2px $btn-color;
+                }
+                &-icon{
+                    @include respond-between(xs, sm) {
+                      width: 20px;
+                      height: 20px;
+                    }
+                    @include respond-below(xs) {
+                        width: 16px;
+                        height: 16px;
+                        line-height: 14px !important;
+                    }
+                }
+            }
+            .navbar-collapse{
+                ul.navbar-nav{
+                    margin-left: 173px;
+
+                    @include respond-between(md, lg) {
+                        margin-left: 100px
+                    }
+                    @include respond-below(md) {
+                      margin-left: 0 !important;
+                      background-color: $menu-bg;
+                    }
+                    li.nav-item{
+                        a.nav-link{
+                            @include fonts($main-font !important, 14, 500 !important, $menu-color !important, uppercase !important, 45px);
+                            padding: 0 23px;
+
+                            @include respond-between(md, lg) {
+                                padding: 0 16px;
+                            }
+                            @include respond-below(md) {
+                                padding: 0 !important;
+                                text-align: center;
+                              }
+                            @include respond-between(xs, sm) {
+                              line-height: 35px;
+                            }
+                            @include respond-below(xs) {
+                                line-height: 30px;
+                                font-size: 12px;
+                            }
+                            &.active{
+                                color: $btn-color !important;
+                            }
+                            &:hover {
+                                color: $btn-color !important;
+                                background-color: $white-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

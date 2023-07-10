@@ -1,0 +1,145 @@
+.contact-area{
+    .visit-wrapper{
+        .visit-info{
+            margin-top: 50px;
+
+            @include respond-between(sm, md) {
+              margin-top: 20px !important;
+            }
+            @include respond-below(sm) {
+                margin-top: 15px !important;
+              
+            }
+            &__icon{
+                a{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    background-color: $btn-color;
+                    @extend .transition;
+
+                    @include respond-between(md, lg) {
+                        height: 40px;
+                        width: 40px;
+                    }
+                    @include respond-between(sm, md) {
+                        height: 35px;
+                        width: 35px;
+                    }
+                    @include respond-between(xs, sm) {
+                        height: 35px;
+                        width: 35px;
+                    }
+                    @include respond-below(xs) {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    i{
+                        font-size: 18px;
+                        color: $white-color;
+                        @extend .transition;
+
+                        @include respond-between(sm, md) {
+                            font-size: 14px;
+                        }
+                        @include respond-between(xs, sm) {
+                            font-size: 14px;
+                        }
+                        @include respond-below(xs) {
+                            font-size: 12px;
+                        }
+
+                    }
+                }
+            }
+            &__disc{
+                p{
+                    @include fonts($main-font, 14, 400, $para-color, uppercase, 27px);
+                    margin-left: 25px;
+
+                    @include respond-between(md, lg) {
+                        margin-left: 20px;
+                        font-size: 13px;
+                    }
+                    @include respond-between(sm, md) {
+                        margin-left: 18px;
+                        font-size: 12px;
+                    }
+                    @include respond-between(xs, sm) {
+                        font-size: 12px;
+                    }
+                    @include respond-below(xs) {
+                        @include texts(12, 20)
+                    }
+                    & span{
+
+                    }
+                }
+            }
+            &:hover {
+                .visit-info{
+                    &__icon{
+                        a{
+                            background-color: $dot-bg;
+                            i{
+                                color: $title-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-form{
+        form{
+            .form-control{
+                @include fonts($main-font, 12, 300, $title-color, lowercase, 27px);
+                padding: 20px;
+                border: 1px solid $border-color;
+
+                @include respond-between(sm, md) {
+                  padding: 15px 20px;
+                  line-height: 22px;
+                }
+                @include respond-between(xs, sm) {
+                    padding: 13px 17px;
+                    line-height: 22px;
+                }
+                @include respond-below(xs) {
+                    padding: 12px 15px;
+                    line-height: 20px;
+                }
+
+                &::placeholder{
+                    @include fonts($main-font, 12, 300, $place-color, uppercase, 27px);
+
+                }
+            }
+            textarea.form-control{
+                padding-top: 30px;
+                height: 150px;
+
+                @include respond-between(sm, md) {
+                    padding-top: 20px;
+                    height: 120px;
+                }
+                @include respond-between(xs, sm) {
+                    padding-top: 20px;
+                    height: 100px;
+                }
+                @include respond-below(xs) {
+                    padding-top: 15px;
+                    height: 80px;
+                }
+            }
+            button{
+                margin-top: 30px;
+
+                @include respond-below(md) {
+                    margin-top: 20px;
+                  
+                }
+            }
+        }
+    }
+}

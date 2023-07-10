@@ -1,0 +1,142 @@
+.appointment-area{
+    .appointment{
+        &__image{
+            img{
+
+            }
+        }
+        &__contact{
+            background-color: $appointment-bg;
+            padding: 110px 0px 130px 100px;
+
+            @include respond-between(md, lg) {
+                padding: 100px 0px 100px 100px;
+            }
+            @include respond-between(sm, md) {
+                padding: 100px 100px 100px 100px;
+            }
+            @include respond-between(xs, sm) {
+                padding: 90px 70px 90px 70px;
+            }
+            @include respond-below(xs) {
+                padding: 50px 20px 50px 20px;
+            }
+
+            &__wrapper{
+                max-width: 710px;
+
+                @include respond-between(lg, xl) {
+                    max-width: 570px;
+                }
+                @include respond-between(md, lg) {
+                    max-width: 570px;
+                }
+                @include respond-below(md) {
+                  max-width: inherit
+                }
+            }
+
+            form{
+                input.form-control{
+                    @include fonts($main-font, 13, 400, $title-color, lowercase, 52px);
+                    background-color: inherit;
+                    padding: 0;
+                    border-bottom: 1px solid $place-color;
+                    border-top: 0px solid;
+                    border-left: 0px solid;
+                    border-right: 0px solid;
+                    
+                    @include respond-between(md, lg) {
+                        line-height: 48px;
+                    }
+                    @include respond-between(sm, md) {
+                        line-height: 45px;
+                    }
+                    @include respond-between(xs, sm) {
+                        line-height: 35px;
+                    }
+                    @include respond-below(xs) {
+                      @include texts(11, 26);
+                    }
+                    &::placeholder{
+                        @include fonts($main-font, 13, 400, $place-color, uppercase, 52px);
+
+                        @include respond-between(md, lg) {
+                            line-height: 48px;
+                        }
+                        @include respond-between(sm, md) {
+                            line-height: 45px;
+                        }
+                        @include respond-between(xs, sm) {
+                            line-height: 35px;
+                        }
+                        @include respond-below(xs) {
+                          @include texts(11, 26);
+                        }
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+    
+                .nice-select{
+                    @extend input.form-control;
+                    height: inherit;
+                    span.current{
+                        @include fonts($main-font, 13, 400, $place-color, lowercase, 52px);
+                        text-transform: uppercase;
+
+                        @include respond-between(md, lg) {
+                            line-height: 48px;
+                        }
+                        @include respond-between(sm, md) {
+                            line-height: 45px;
+                        }
+                        @include respond-between(xs, sm) {
+                            line-height: 35px;
+                        }
+                        @include respond-below(xs) {
+                          @include texts(11, 26);
+                        }
+                    }
+                    ul.list{
+                        background-color: $white-color;
+                        li{
+                            @include fonts($main-font, 13, 400, $title-color, capitalize, 52px);
+                            text-align: center;
+                            @extend .transition;
+
+                            @include respond-between(md, lg) {
+                                line-height: 48px;
+
+                            }
+                            @include respond-between(sm, md) {
+                                line-height: 45px;
+                            }
+                            @include respond-between(xs, sm) {
+                                line-height: 35px;
+                            }
+                            @include respond-below(xs) {
+                              @include texts(11, 26);
+                            }
+                            &:hover {
+                                background-color: $dot-bg;
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+                button.btn{
+                    margin-top: 40px;
+                    @extend .transition;
+                }
+                input[type='date'] ,input[type='time']{
+                    &.form-control:valid{
+                        background-image: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

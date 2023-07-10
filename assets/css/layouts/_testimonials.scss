@@ -1,0 +1,94 @@
+.testimonials-area{
+    background-color: $testimonials-bg;
+    .testimonials{
+        .slick-dots{
+            display: flex;
+            justify-content: center;
+            li{
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: $dot-bg;
+                margin: 0 5px;
+
+                &.slick-active{
+                    background-color: $btn-color;
+                }
+                button{
+                    display: none;
+                }
+            }
+        }
+        .testimonials-single{
+
+        }
+        &__icon{
+            .image{
+                img{
+
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts($second-font, 18, 400, $title-color, inherit, 35px);
+                margin: 40px 0;
+
+                @include respond-between(md, lg) {
+                    margin: 35px 0;
+                }
+                @include respond-between(sm, md) {
+                     margin: 30px 0;
+                     @include texts(16, 30);
+                  
+                }
+                @include respond-between(xs, sm) {
+                    margin: 27px 0;
+                    @include texts(14, 23);
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(13, 20);
+                    margin: 22px 0;
+                    text-align: justify;
+                }
+            }
+        }
+        &__content{
+            .testimonials-profile{
+                .image{
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .testimonials-info{
+                h2{
+                     @include fonts($second-font, 22, 400, $title-color, capitalize, 35px);
+                     margin: 25px 0 60px 0;
+
+                    @include respond-between(sm, md) {
+                         margin: 20px 0 50px 0;
+                        @include texts(20, 30);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        margin: 17px 0 40px 0;
+                        @include texts(18, 30);
+                      
+                    }
+                    @include respond-below(xs) {
+                        margin: 15px 0 35px 0;
+                        @include texts(16, 25);
+                      
+                    }
+
+                     & span{
+                         font-weight: 300;
+                         font-size: 15px;
+                     }
+                }
+            }
+        }
+    }
+}

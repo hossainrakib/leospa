@@ -1,0 +1,126 @@
+.hero-area{
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 10%;
+
+    @include respond-between(lg, xl) {
+         background-size: 8%;
+  
+    }
+    @include respond-between(md, lg) {
+        background-size: 7%;
+  
+    }
+    @include respond-between(sm, md) {
+        background-size: 15%;
+      
+    }
+    @include respond-between(xs, sm) {
+        background-size: 15%;
+      
+    }
+    @include respond-below(xs) {
+    background-position: left 25%;
+    background-size: 13%;
+      
+    }
+    .hero-wrapper{
+        .single-hero{
+            &:after{
+                position: absolute;
+                content: '';
+                background-image: url(../../img/banner/spa.png);
+                background-position: top right;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                z-index: -1;
+
+                @include respond-between(lg, xl) {
+                    background-size: 570px 650px;
+                }
+                @include respond-between(md ,lg) {
+                    background-size: 470px 570px;
+                  
+                }
+                @include respond-below(md) {
+                  display: none
+                }
+            }
+            .hero{
+                &__sub-title{
+                    h4{
+                        @include fonts($second-font, 15, 400, $hero-sub-title, uppercase, 72px);
+
+                        @include respond-between(sm, md) {
+                            line-height: 50px
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                            line-height: 40px
+                        }
+                        @include respond-below(xs) {
+                            line-height: 40px
+                        }
+                    }
+                }
+                &__title{
+                    h2{
+                        @include fonts($second-font, 60, 700, $title-color, inherit, 75px);
+
+                        @include respond-between(md, lg) {
+                            @include texts(45, 55)
+                        }
+                        @include respond-between(sm, md) {
+                            @include texts(40, 50)
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                            @include texts(30, 50)
+                          
+                        }
+                        @include respond-below(xs) {
+                            @include texts(25, 30)
+                          
+                        }
+                    }
+                }
+                &__disc{
+                    p{
+                        @include fonts($main-font, 15, 400, $hero-disc-color, inherit, 26px);
+
+                        @include respond-below(xs) {
+                            @include texts(12, 20)
+                        }
+                    }
+                }
+                &__link{
+                    button{
+                        a{
+                            padding: 0 55px 0 30px;
+                            background-color: $btn-color;
+
+                            @include respond-below(xs) {
+                                 padding: 0 45px 0 20px;
+                              
+                            }
+
+                            & i{
+                                right: 30px;
+                            }
+                            &:hover {
+                                background-color: $title-color;
+                                color: $btn-color;
+                                & i{
+                                    right: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.footer-area{
+    background-color: $footer-bg;
+    padding: 100px 0;
+
+    @include respond-between(md, lg) {
+  
+    }
+    @include respond-between(sm, md) {
+        padding: 70px 0;
+    }
+    @include respond-between(xs, sm) {
+        padding: 60px 0;
+    }
+    @include respond-below(xs) {
+        padding: 40px 0;
+    }
+    .footer{
+        .logo{
+            .image{
+                img{
+
+                }
+            }
+        }
+        &__menu{
+            ul{
+                @include respond-below(xs) {
+                    margin: 15px 0;
+                }
+                li.item{
+                    a.link{
+                        @include fonts($main-font, 14, 500, $title-color, uppercase, 48px);
+                        padding: 20px 30px;
+                        margin-top: 10px;
+                        display: inline-block;
+                        @extend .transition;
+
+                        @include respond-between(md, lg) {
+                            padding: 20px 25px;
+  
+                        }
+                        @include respond-between(sm, md) {
+                            padding: 15px 20px;
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                            padding: 12px 15px;
+                            @include texts(12, 35);
+                          
+                        }
+                        @include respond-below(xs) {
+                            padding: 4px 15px;
+                            margin-top: 0px;
+                            @include texts(13, 25);
+                        }
+                    }
+
+                    &:hover{
+                        & a{
+                            color: $btn-color;
+                        }
+                    }
+                }
+            }
+        }
+        &__socail{
+            ul{
+                li.item{
+                    a{
+                        font-size: 13px;
+                        color: $follow-color;
+                        line-height: 25px;
+                        padding: 0 15px;
+                        border-right: 1px solid $follow-color;
+                        @extend .transition;
+
+                        @include respond-between(xs, sm) {
+                            padding: 0 12px;
+                        }
+                        @include respond-below(xs) {
+                          margin-top: 20px;
+                          padding: 0 10px;
+                        }
+                        i{
+
+                        }
+                    }
+                    &:hover{
+                        & a{
+                            color: $btn-color;
+                        }
+                    }
+                    &:last-child a{
+                        border: none;
+                    }
+                    
+                }
+            }
+        }
+        &__copy-right{
+            P{
+                @include fonts($main-font, 13, 400, $para-color, uppercase, 25px);
+                margin-top: 40px;
+
+                @include respond-between(sm, md) {
+                    margin-top: 30px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    margin-top: 25px;
+                  
+                }
+                @include respond-below(xs) {
+                    margin-top: 20px;
+                    line-height: 22px;
+                }
+                & span{
+                    color: $btn-color;
+                }
+            }
+        }
+    }
+}
